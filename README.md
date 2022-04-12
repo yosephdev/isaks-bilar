@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Dynamisk React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project requires me to build a web shop according to a flowchart and is bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Bygg appen, dess sidor och under komponenter efter flödesschemat
 
-In the project directory, you can run:
+### pages/Products.js
 
-### `npm start`
+○ Visa en lista på alla produkter, hämtat via ett API. Varje produkt skall visa följande
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    ■ Bild på produkten
+    ■ Titel
+    ■ Pris
+    ■ En länk till Produkt-sida, för den specifika produkten
+    ■ Se till att JSX-koden enskilda produkter i listan, är omskriven till en under komponent “components/Product.js”. 
+    
+○ Bygg vidare på alla produkter i listan, med en “Add to Cart”-knapp, som skall möjliggöra att produkter läggs till i varukorgen
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+### pages/Product.js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+○ Visar specifik data av den valda produkten, hämtat via ett API. Följande skall visas för den enskilda produkt-sidan:
 
-### `npm run build`
+    ■ Bild på produkten
+    ■ Titel
+    ■ Pris
+    ■ Beskrivning
+    ■ Lagersaldo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+○ Bygg vidare på denna sida med en “Add to Cart”-knapp, som skall möjliggöra att produkten läggs till i varukorgen
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### pages/Checkout.js
 
-### `npm run eject`
+○ Listar alla produkter som är placerade i varukorgen, i en HTML <table>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+○ Varje produkt i tabellen skall visa:
+  
+    ■ Bild på produkten
+    ■ Titel
+    ■ Pris
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+○ Total priset för alla produkter i varukorgen, skall kalkyleras och visas.
+  
+○ Om inga produkter finns i varukorgen, då skall det visas en beskrivning på att varukorgen är tom, tillsammans med en knapp som tar användaren till produktlista-sidan
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### components/Cart.js
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+○ Cart.js är inte en enskild sida, utan en del av en sida. Betyder att den skall vara tillgänglig hela tiden, precis som footer och header
+  
+○ Listar alla produkter som är placerade i varukorgen
+  
+○ Varje produkt skall visa:
+  
+    ■ Bild på produkten
+    ■ Titel
+    ■ Pris
+  
+○ Totalpriset för alla produkter i varukorgen, skall kalkyleras och visas.
+  
+○ En knapp som tar användaren till kassa-sidan
