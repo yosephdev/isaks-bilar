@@ -1,14 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import React from 'react';
-
+import './App.css'
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Header from './components/Header'
+import Products from './pages/Products'
 
 function App() {
   return (
-    <div className="App">
-      Webshop in React
-    </div>
-  );
+    <BrowserRouter>  {/* BrowserRouter is a component that wraps the entire app */}
+      <Header />
+      <Routes>  {/* Routes is a component that renders the routes */}
+        <Route path="/products" element={<Products />} />  {/* element is a prop that is passed to the Route component */}
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
