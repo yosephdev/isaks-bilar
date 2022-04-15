@@ -1,14 +1,16 @@
-html {
-  font-size: 62.5%;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  font: 300 1.4rem/1.6 "Helvetica Neue", sans-serif;  /* 1.6rem = 16px */
+  font: 300 1.4rem/1.6 'Helvetica Neue', sans-serif; /* 1.6rem = 16px */
   color: #333;
-  background: #022c43;
+  background: #fff;
   display: block;
-  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
