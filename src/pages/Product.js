@@ -29,7 +29,10 @@ function Product() {
         <section>
           <h2>{params.id}</h2>
           <img src={product.url} alt={product.url} />
+          <h3>{product.title}</h3>
           <p>{product.price}</p>
+          <p>{product.description}</p>
+          <p>{product.storage}</p>
           <button>Add to cart</button>
         </section>
       )}
