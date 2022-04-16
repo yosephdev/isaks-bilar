@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
+
 function Products() {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
@@ -28,9 +29,7 @@ function Products() {
               <h2>{product.title}</h2>
               <img src={product.url} alt={product.url} />
               <p>{product.price}</p>
-              <Link to={`/product/${product.id}`}>
-                <button>View</button>
-              </Link>
+              <Link to={`/products/${product.id}`}>View</Link>
             </div>
           ))}
         </section>
