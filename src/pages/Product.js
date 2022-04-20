@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Link as Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 function Product() {
@@ -34,7 +35,9 @@ function Product() {
           <p>Price: {product.price}</p>
           <p>{product.description}</p>
           <p>Stock: {product.storage}</p>
-          <button>Add to cart</button>
+          <Link className="button" to={`/products/`}>
+            Back to products
+          </Link>
         </Section>
       )}
     </div>
@@ -47,6 +50,8 @@ const Section = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1rem;
+  margin-top: 2rem;
+  padding: 1rem;
 
   img {
     width: 100%;
@@ -68,11 +73,11 @@ const Section = styled.section`
     color: var(--mainBlue);
   }
 
-  button {
+  .button {
     background: var(--mainBlue);
     color: var(--mainWhite);
     border: none;
-    padding: 0.5rem 1.5rem;   
+    padding: 0.5rem 1.5rem;
     margin-left: auto;
     text-transform: capitalize;
     font-size: 1rem;
