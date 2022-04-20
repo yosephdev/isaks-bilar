@@ -11,3 +11,28 @@
   src: url(./assets/fonts/CoolveticaRg-Regular.woff2) format('woff2'),
     url(./assets/fonts/CoolveticaRg-Regular.woff) format('woff');
 }
+
+:root {
+  --mainBlue: #0d47a1;
+  --lightBlue: #e0f7fa;
+  --mainWhite: #f3f3f3;
+  --mainDark: #232528;
+  --mainYellow:#ffa400;
+}
+
+
+.text-title{
+	font-family: 'CoolveticaRg-Regular', sans-serif;
+	letter-spacing: 0,29rem;
+	text-transform: uppercase; 
+	text-align: center;
+}
+
+.text-blue{
+	color: var(--mainBlue);
+}
+
+.text-bright{
+	color: var(--lightBlue);
+}
+
