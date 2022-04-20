@@ -44,7 +44,9 @@ const Section = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1rem;
-  
+  margin-top: 2rem;
+  padding: 1rem;
+
   img {
     width: 100%;
     height: auto;
@@ -69,7 +71,6 @@ const Section = styled.section`
     font-size: 1rem;
     border-radius: 4px;
     text-decoration: none;
-    cursor: pointer;  
-  }  
-
+    cursor: pointer;
+  }
 `
