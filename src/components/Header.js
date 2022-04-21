@@ -19,7 +19,7 @@ function Header() {
 export default Header
 
 const NavWrapper = styled.nav`
-  background: var(--lightBlue);
+  background: var(--mainWhite);
   .nav-link {
     color: var(--mainWhite) !important;
     font-size: 1.3rem;
