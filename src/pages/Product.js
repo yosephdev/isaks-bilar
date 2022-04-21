@@ -48,41 +48,48 @@ export default Product
 
 const Section = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 1rem;
-  margin-top: 2rem;
-  padding: 1rem;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  a {
-    text-decoration: none;
-    color: var(--mainBlue);
-  }
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-gap: 20px;
+  margin: 20px;
 
   .button {
-    background: var(--mainBlue);
-    color: var(--mainWhite);
-    border: none;
-    padding: 0.5rem 1.5rem;
-    margin-left: auto;
-    text-transform: capitalize;
-    font-size: 1rem;
-    border-radius: 4px;
-    text-decoration: none;
-    cursor: pointer;
+    background-color: #f5f5f5;
+
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #fafafa;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--mainBlue);
+    }
+
+    .button {
+      background: var(--mainBlue);
+      color: var(--mainWhite);
+      border: none;
+      padding: 0.5rem 1.5rem;
+      text-transform: capitalize;
+      font-size: 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+    }
   }
 `

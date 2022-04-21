@@ -46,6 +46,7 @@ const Section = styled.section`
   grid-gap: 1rem;
   margin-top: 2rem;
   padding: 1rem;
+  background-color: #fafafa;
 
   img {
     width: 100%;
