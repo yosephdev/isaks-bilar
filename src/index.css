@@ -5,8 +5,8 @@
 
 body {
   font: 400 1.4rem/1.6 'Helvetica Neue', sans-serif !important; /* 1.6rem = 16px */
-  background: var(--lightblue) !important;
-  color: var(--mainDark) !important;
+  color: #232528;
+  background-color: #f3f3f3;  
   display: block;
   position: relative;
   min-height: 100vh;
