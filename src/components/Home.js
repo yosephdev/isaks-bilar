@@ -1,12 +1,19 @@
 import React from 'react'
-import styled from 'styled-components'
 import { PageWrapper } from '../styledComponents'
+import { motion } from 'framer-motion'
+import { PageVariant, TitleVariant, TextVariant } from '../animations.js'
+
 
 function Home() {
   return (
-    <PageWrapper> 
-      <h1>Home</h1>      
-   </PageWrapper>
+    <PageWrapper
+      as={motion.div}
+      initial="start"
+      animate="stop"
+      variants={PageVariant}
+    >
+      <motion.h1 variants={TitleVariant}>Home</motion.h1>     
+    </PageWrapper>
   )
 }
 

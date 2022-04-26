@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { PageWrapper } from '../styledComponents'
+import { motion } from 'framer-motion'
 
 function Product() {
   const params = useParams()
@@ -23,6 +24,27 @@ function Product() {
 
   return (
     <PageWrapper>
+      <motion.h2
+        initial={{
+          x: -400,
+          y: -200,
+          opacity: 0,
+          fontSize: '1em',
+        }}
+        animate={{
+          x: 0,
+          y: 0,
+          opacity: 1,
+          rotate: 360,
+          fontSize: '2em',
+          color: '#fff',
+        }}
+        transition={{
+          type: 'spring',
+          ease: 'easeInOut',
+          duration: 1,
+        }}
+      ></motion.h2>
       <section>
         <h2>{params.id}</h2>
         <h2>{product.title}</h2>
@@ -32,7 +54,15 @@ function Product() {
         <p>Stock: {product.storage}</p>
         {/* <Button></Button> */}
         <Link to="/products">
-          <ExtendingStyleBtn>Back to products </ExtendingStyleBtn>
+          <ExtendingStyleBtn           
+            as={motion.button}
+            whileHover={{
+              x: -10,
+              transition: { type: 'tween', stiffness: 100, duration: 0.5 },
+            }}
+          >
+            Back to products{' '}
+          </ExtendingStyleBtn>
         </Link>
       </section>
     </PageWrapper>

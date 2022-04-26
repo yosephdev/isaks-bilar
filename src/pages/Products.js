@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Button, PageWrapper } from '../styledComponents'
+import { motion } from 'framer-motion'
 
 function Products() {
   const [products, setProducts] = useState([])
@@ -17,7 +18,12 @@ function Products() {
   }, [])
 
   return (
-    <PageWrapper>
+    <PageWrapper
+      as={motion.div}
+      initial={{ x: '100vw', opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ type: 'spring', stiffness: 100 }}
+    >
       <section>
         {products.map((product) => (
           <div key={product.id}>
@@ -25,7 +31,16 @@ function Products() {
             <h2>{product.title}</h2>
             <p>{product.price}</p>
             <Link to={`/products/${product.id}`}>
-              <Button>View</Button>{' '}
+              <Button
+                as={motion.button}
+                whileHover={{
+                  scale: 1.1,
+                  transition: { duration: 0.5 },
+                }}
+                whileTap={{ scale: 0.9 }}
+              >
+                View
+              </Button>{' '}
             </Link>
           </div>
         ))}
