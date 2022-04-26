@@ -4,26 +4,28 @@ import styled from 'styled-components'
 
 function Header() {
   return (
-    <NavWrapper className="Navbar navbar-expand-sm navbar-dark px-sm-5">
-      <div className="d-flex align-items-center justify-content-center">      
-        <ul className="navbar-nav align-item-center">
-          <li className="nav-item ml-5">
-            <Link to="/products"> Products </Link>
-          </li>
-        </ul>
-      </div>
-    </NavWrapper>
+    <div>
+      <NavLink to="/">Home</NavLink> <NavLink to="/products">Products</NavLink>
+    </div>
   )
 }
 
-export default Header
+const NavLink = styled(Link)`
+  color: var(--mainWhite);
+  text-decoration: none;
+  padding: 0.25em 1em;
+  margin: 1em;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 1px solid var(--mainWhite);
+  border-radius: 3px;
+  background-color: var(--mainBlue);
 
-const NavWrapper = styled.nav`
-  background: var(--mainWhite);
-  .nav-link {
-    color: var(--mainWhite) !important;
-    font-size: 1.3rem;
-    text-transform: capitalize;
-    padding-top: 1rem;
+  &:hover {
+    background-color: var(--mainYellow);
+    color: #000;
+    border: 1px solid var(--mainYellow);
   }
 `
+export default Header
