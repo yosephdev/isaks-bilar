@@ -7,9 +7,10 @@ export const PageWrapper = styled.div`
   justify-content: center;
   margin-top: 2em;
   margin-bottom: 2em;
-  padding: 1em;
+  padding: 0 0.5rem;
   background-color: var(--mainBlue);
   background-color: #fafafa;
+  min-height: 100vh;
 `
 
 export const img = styled.img`
@@ -38,7 +39,7 @@ export const Button = styled.button`
   background: ${(props) => (props.primary ? 'white' : 'lightblue')};
   color: ${(props) => (props.primary ? 'blue' : 'mainDark')};
   font-size: 1em;
-  margin: 1em;
+  /* margin: 1em;  */
   padding: 0.25em 1em;
   border: 2px solid var(--lightBlue);
   border-radius: 3px;
