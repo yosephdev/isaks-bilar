@@ -21,18 +21,4 @@
 }
 
 
-.text-title{
-	font-family: 'CoolveticaRg-Regular', sans-serif;
-	letter-spacing: 0,29rem;
-	text-transform: uppercase; 
-	text-align: center;
-}
-
-.text-blue{
-	color: var(--mainBlue);
-}
-
-.text-bright{
-	color: var(--lightBlue);
-}
 
