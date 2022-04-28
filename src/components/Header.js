@@ -5,7 +5,8 @@ import styled from 'styled-components'
 function Header() {
   return (
     <div >
-      <NavLink to="/">Home</NavLink> <NavLink to="/products">Products</NavLink>
+      {/* <NavLink to="/">Home</NavLink> */}
+      <NavLink to="/products">Products</NavLink>
     </div>
   )
 }
