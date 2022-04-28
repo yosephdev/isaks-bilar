@@ -20,12 +20,3 @@ export const TitleVariant = {
   },
 }
 
-export const TextVariant = {
-  start: { opacity: 0 },
-  stop: {
-    opacity: 1,
-    transition: {
-      duration: 1,
-    },
-  },
-}
