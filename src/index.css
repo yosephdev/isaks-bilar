@@ -4,11 +4,12 @@
 }
 
 body {
-  font: 400 1.4rem/1.6 'Helvetica Neue', sans-serif !important; /* 1.6rem = 16px */
+  font: 14px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #232528;
-  background-color: #f3f3f3;  
-  display: block;
+  background-color: #f3f3f3;
+  display: flex;
   position: relative;
+  flex-direction: column;
   min-height: 100vh;
 
   -webkit-font-smoothing: antialiased;
