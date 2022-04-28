@@ -1,7 +1,7 @@
 import React from 'react'
 import { PageWrapper } from '../styledComponents'
 import { motion } from 'framer-motion'
-import { PageVariant, TitleVariant, TextVariant } from '../animations.js'
+import { PageVariant, TitleVariant } from '../animations.js'
 
 
 function Home() {
