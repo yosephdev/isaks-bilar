@@ -1,13 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { Button } from '../styledComponents'
 
 function Header() {
   return (
-    <div >
-      {/* <NavLink to="/">Home</NavLink> */}
-      <NavLink to="/products">Products</NavLink>
-    </div>
+    <nav>
+      <a className="navbar-brand">Vito Ferrari</a>
+      <h1 class="title">Cars for Sale</h1>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/products">Cars</NavLink>
+      <Button type="submit">Cart</Button>
+      {/* <div id="cart"></div> */}
+    </nav>
   )
 }
 
@@ -19,7 +24,7 @@ const NavLink = styled(Link)`
   margin: 1em;
   font-size: 1.25em;
   font-weight: bold;
-  text-transform: uppercase;  
+  text-transform: uppercase;
   cursor: pointer;
   border-radius: 3px;
   background-color: var(--mainBlue);
