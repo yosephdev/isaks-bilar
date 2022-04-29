@@ -2,6 +2,7 @@ import './App.css'
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import Products from './pages/Products'
 import Product from './pages/Product'
 
@@ -13,6 +14,7 @@ function App() {
         <Route path="/products" element={<Products />} />  {/* element is a prop that is passed to the Route component */}
         <Route path="/products/:productId" element={<Product />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
