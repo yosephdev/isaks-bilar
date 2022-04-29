@@ -45,26 +45,41 @@ function Product() {
           duration: 1,
         }}
       ></motion.h2>
-      <section>
+      <div class="card">
         <h2>{params.id}</h2>
-        <h2>{product.title}</h2>
-        <img src={product.url} alt={product.url} />
-        <p>Price: {product.price}</p>
-        <p>{product.description}</p>
-        <p>Stock: {product.storage}</p>
-        {/* <Button></Button> */}
-        <Link to="/products">
-          <ExtendingStyleBtn           
-            as={motion.button}
-            whileHover={{
-              x: -10,
-              transition: { type: 'tween', stiffness: 100, duration: 0.5 },
-            }}
-          >
-            Back to products{' '}
-          </ExtendingStyleBtn>
-        </Link>
-      </section>
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img
+              src={product.url}
+              className="card-img-top"
+              alt={product.url}
+            ></img>
+          </figure>
+        </div>
+        <div class="card-content">
+          <h2 class="title product-title">{product.title}</h2>
+          <div class="content">
+            {' '}
+            <strong>Price:</strong> {product.price}
+          </div>
+          <div class="content">{product.description}</div>
+          <div class="content">
+            {' '}
+            <strong>Stock:</strong> {product.storage}
+          </div>
+          <Link to="/products">
+            <ExtendingStyleBtn
+              as={motion.button}
+              whileHover={{
+                x: -10,
+                transition: { type: 'tween', stiffness: 100, duration: 0.5 },
+              }}
+            >
+              Back to products{' '}
+            </ExtendingStyleBtn>
+          </Link>
+        </div>
+      </div>
     </PageWrapper>
   )
 }
@@ -72,20 +87,20 @@ function Product() {
 export default Product
 
 const ExtendingStyleBtn = styled.button`
-  color: var(--mainDark);
+  color: var(--main-accent-color);
   text-decoration: none;
   cursor: pointer;
   padding: 0.25em 1em;
   margin: 1em;
   font-size: 1em;
   font-weight: bold;
-  border: 1px solid var(--lightBlue);
+  border: 1px solid var(--title-color);
   border-radius: 3px;
-  background-color: var(--mainYellow);
+  background-color: var(--title-color);
 
   &:hover {
-    background-color: var(--mainDark);
-    color: var(--mainWhite);
-    border: 1px solid var(--lightBlue);
+    background-color: var(--title-color);
+    color: var(--main-background-color);
+    border: 1px solid var(--title-color);
   }
 `
