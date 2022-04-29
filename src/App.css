@@ -13,12 +13,35 @@
 }
 
 :root {
-  --mainBlue: #0d47a1;
-  --lightBlue: #e0f7fa;
-  --mainWhite: #f3f3f3;
-  --mainDark: #232528;
-  --mainYellow:#ffa400;
+  --main-background-color: #f9fbf2;
+  --main-top-background-color: #fbfef9;
+  --main-accent-color: #fb8f67;
+  --title-color: #1e2019;
 }
 
+.title {
+  color: var(--title-color);
+  font-family: 'Helvetica-Neue', sans-serif;
+  font-size: 3em;
+}
 
+.navbar-brand {
+  color: var(--main-accent-color);
+  font-family: 'La Belle Aurore', sans-serif;
+  font-size: 2.5em;
+  font-weight: bold;
+}
 
+#wrapper {
+  width: 90%;
+  min-height: 80%;
+  margin-top: -100px; /* -100px to center vertically */
+  background-color: var(--main-top-background-color);
+  margin: 0 auto;
+  padding: 20px; 
+  border-radius: 10px;
+}
+
+.product-title {
+  font-size: 2em;
+}
