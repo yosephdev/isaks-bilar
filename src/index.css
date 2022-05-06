@@ -1,17 +1,167 @@
-* {
+@font-face {
+  font-family: 'Helevetica Neue';
+  src: url(./assets/fonts/Helvetica-Neue.ttf);
+}
+@font-face {
+  font-family: 'La Belle Aurore';
+  src: url(./assets/fonts/LaBelleAurore.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Coolvetica';
+  src: url(./assets/fonts/CoolveticaRg-Regular.woff2) format('woff2'),
+    url(./assets/fonts/CoolveticaRg-Regular.woff) format('woff');
+}
+
+/* VARIABLES ======================================== */
+:root {
+  --mainBlue: #0d47a1;
+  --lightBlue: #e0f7fa;
+  --mainWhite: #f3f3f3;
+  --mainDark: #232528;
+  --mainYellow: #ffa400;
+
+  --max-width: 1100px;
+
+  /* min-width */
+  --mq-small: 768px;
+  --mq-medium: 1025px;
+  --mq-large: 1366px;
+
+  position: relative;
+}
+
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
-  font: 14px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #232528;
-  background-color: #f3f3f3;
-  display: flex;
+  font-family: 'Helvetica Neue', sans-serif;
   position: relative;
-  flex-direction: column;
-  min-height: 100vh;
-
+  background: var(--mainDark);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+section {
+  max-width: var(--max-width);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 5.8rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4, 4rem;
+  letter-spacing: 0.15rem;
+  margin-bottom: 2.5rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 3.6rem;
+  letter-spacing: 0.115rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+  color: var(--mainWhite);
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 3.8rem;
+    letter-spacing: 0.2rem;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+    letter-spacing: 0.15rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+    letter-spacing: 0.115rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 3.8rem;
+    letter-spacing: 0.2rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 3.3rem;
+    letter-spacing: 0.17rem;
+  }
+
+  h6 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    letter-spacing: 0.13rem;
+  }
+}
+
+button {
+  width: 16rem;
+  height: 4.8rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: white;
+  background-color: var(--mainDark);
+  text-transform: uppercase;
+  border: none;
+  margin: 0 1rem;
+  margin-left: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--mainDark);
 }
