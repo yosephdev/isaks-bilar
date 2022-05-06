@@ -24,7 +24,6 @@ function Products() {
       animate={{ x: 0, opacity: 1 }}
       transition={{ type: 'spring', stiffness: 100 }}
     >
-<<<<<<< HEAD
       <section className="container">
         {products.map((product) => (
           <div key={product.id}>
@@ -43,41 +42,9 @@ function Products() {
                 View
               </Button>{' '}
             </Link>
-=======
-      <div id="wrapper">
-        {products.map((product) => (
-          <div class="card">
-            <div key={product.id}>
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src={product.url} alt={product.url} />
-                </figure>
-              </div>
-              <div class="card-content">
-                <h2 class="title product-title">{product.title}</h2>
-                <div class="content">
-                  <p>
-                    <strong>Price: </strong> {product.price}
-                  </p>
-                </div>
-                <Link to={`/products/${product.id}`}>
-                  <Button
-                    as={motion.button}
-                    whileHover={{
-                      scale: 1.2,
-                      transition: { duration: 1 },
-                    }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    More Details
-                  </Button>{' '}
-                </Link>
-              </div>
-            </div>
->>>>>>> 0fdb040fbf840019ad5979fc09b8728983141b45
           </div>
         ))}
-      </div>
+      </section>
     </PageWrapper>
   )
 }
