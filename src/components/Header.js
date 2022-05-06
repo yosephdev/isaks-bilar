@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { HeaderWrapper } from '../styledComponents'
+
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { useState } from 'react'
@@ -40,7 +41,7 @@ function Header() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/products">Cars</Link>
+            <Link to="/products">Cars for Sale</Link>
           </li>
         </ul>
         <button className="cart-container" onClick={toggleCart}>

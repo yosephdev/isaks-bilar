@@ -12,16 +12,16 @@ function Footer() {
     <FooterWrapper>
       <div className="footer-container">
         <ul>
-          <li>
+          {/* <li>
             <Link to="/">Home</Link>
-          </li>
+          </li> */}
           <li>
-            <Link to="/products">Cars</Link>{' '}
+            <Link to="/products">Cars for Sale</Link>{' '}
           </li>
         </ul>
         <div className="text">
           <p>
-            Adeca is an all in one stop to fulfill your luxurious car needs.
+            Adeca is an all in one stop for your luxurious car needs.
             Come and visit our store - we are open 7 days a week.
           </p>
           <p className="copyright">Copyright 2022. All Rights Reserved</p>
