@@ -21,7 +21,7 @@ function Product() {
 
   useEffect(() => {
     fetchProduct()
-  }, [])
+  }) 
 
   return (
     <Wrapper>
