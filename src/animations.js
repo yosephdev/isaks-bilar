@@ -20,3 +20,12 @@ export const TitleVariant = {
   },
 }
 
+export const TextVariant = {
+  start: { x: '-100vw' },
+  stop: {
+    x: 0,
+    transition: {
+      type: 'spring',
+    },
+  },
+}
