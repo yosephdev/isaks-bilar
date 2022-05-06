@@ -65,6 +65,7 @@ export const PageWrapper = styled.section`
   height: 80vh;
   display: flex;
   justify-content: center;
+<<<<<<< HEAD
   align-items: center;
 
   .container {
@@ -176,13 +177,30 @@ export const Button = styled.button`
   /* margin: 1em;  */
   padding: 0.25em 1em;
   border: 2px solid #444;
+=======
+  margin: 0 auto;
+  padding: 1em 2em;
+  min-height: 100vh;
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);  
+`
+
+export const Button = styled.button`
+  background: ${(props) => (props.primary ? '#f9fbf2' : '#1e2019')};
+  color: ${(props) => (props.primary ? '#1e2019' : '#f9fbf2')};
+  font-size: 1em;
+  margin: 1em;
+  text-align: center;
+  padding: 0.25em 1em;
+  border: 2px solid #fff;
+>>>>>>> 0fdb040fbf840019ad5979fc09b8728983141b45
   border-radius: 3px;
   text-decoration: none;
   font-weight: bold;
-  text-align: center;
   cursor: pointer;
 
   &:hover {
+<<<<<<< HEAD
     background: ${(props) => (props.primary ? 'yellow' : 'beige')};
     color: ${(props) => (props.primary ? 'black' : 'black')};
   }
@@ -295,3 +313,21 @@ export const FooterWrapper = styled.footer`
     }
   }
 `
+=======
+    background: ${(props) => (props.primary ? '#fb8f67' : '#1e2019')};
+    color: ${(props) => (props.primary ? '#1e2019' : '#fb8f67')};
+  }
+`
+
+
+
+  
+
+
+
+
+
+
+
+  
+>>>>>>> 0fdb040fbf840019ad5979fc09b8728983141b45

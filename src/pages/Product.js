@@ -46,6 +46,7 @@ function Product() {
           duration: 1,
         }}
       ></motion.h2>
+<<<<<<< HEAD
       <section className="container">
         <h2>{params.id}</h2>
         <h2>{product.title}</h2>
@@ -70,27 +71,78 @@ function Product() {
         </Link>
       </section>
     </Wrapper>
+=======
+      <div class="card">
+        <h2>{params.id}</h2>
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img
+              src={product.url}
+              className="card-img-top"
+              alt={product.url}
+            ></img>
+          </figure>
+        </div>
+        <div class="card-content">
+          <h2 class="title product-title">{product.title}</h2>
+          <div class="content">
+            {' '}
+            <strong>Price:</strong> {product.price}
+          </div>
+          <div class="content">{product.description}</div>
+          <div class="content">
+            {' '}
+            <strong>Stock:</strong> {product.storage}
+          </div>
+          <Link to="/products">
+            <ExtendingStyleBtn
+              as={motion.button}
+              whileHover={{
+                x: -10,
+                transition: { type: 'tween', stiffness: 100, duration: 0.5 },
+              }}
+            >
+              Back to products{' '}
+            </ExtendingStyleBtn>
+          </Link>
+        </div>
+      </div>
+    </PageWrapper>
+>>>>>>> 0fdb040fbf840019ad5979fc09b8728983141b45
   )
 }
 
 export default Product
 
 const ExtendingStyleBtn = styled.button`
+<<<<<<< HEAD
   color: var(--mainYellow);
+=======
+  color: var(--main-accent-color);
+>>>>>>> 0fdb040fbf840019ad5979fc09b8728983141b45
   text-decoration: none;
   cursor: pointer;
   padding: 0.25em 1em;
   margin: 1em;
   font-size: 1.2em;
   font-weight: bold;
-  border: 1px solid var(--lightBlue);
+  border: 1px solid var(--title-color);
   border-radius: 3px;
+<<<<<<< HEAD
   background-color: var(--mainDark);
 
   &:hover {
     background-color: var(--mainYellow);
     color: var(--mainDark);
     border: 1px solid var(--lightBlue);
+=======
+  background-color: var(--title-color);
+
+  &:hover {
+    background-color: var(--title-color);
+    color: var(--main-background-color);
+    border: 1px solid var(--title-color);
+>>>>>>> 0fdb040fbf840019ad5979fc09b8728983141b45
   }
 
   i {
