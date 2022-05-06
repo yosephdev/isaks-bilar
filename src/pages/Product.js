@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import styled from 'styled-components'
-import { PageWrapper } from '../styledComponents'
+import { Wrapper } from '../styledComponents'
 import { motion } from 'framer-motion'
+import { MdKeyboardArrowRight } from 'react-icons/md'
 
 function Product() {
   const params = useParams()
@@ -23,7 +24,7 @@ function Product() {
   }, [])
 
   return (
-    <PageWrapper>
+    <Wrapper>
       <motion.h2
         initial={{
           x: -400,
@@ -45,7 +46,7 @@ function Product() {
           duration: 1,
         }}
       ></motion.h2>
-      <section>
+      <section className="container">
         <h2>{params.id}</h2>
         <h2>{product.title}</h2>
         <img src={product.url} alt={product.url} />
@@ -54,38 +55,48 @@ function Product() {
         <p>Stock: {product.storage}</p>
         {/* <Button></Button> */}
         <Link to="/products">
-          <ExtendingStyleBtn           
+          <ExtendingStyleBtn
             as={motion.button}
             whileHover={{
               x: -10,
               transition: { type: 'tween', stiffness: 100, duration: 0.5 },
             }}
           >
-            Back to products{' '}
+            Back to cars
+            <i>
+              <MdKeyboardArrowRight />
+            </i>
           </ExtendingStyleBtn>
         </Link>
       </section>
-    </PageWrapper>
+    </Wrapper>
   )
 }
 
 export default Product
 
 const ExtendingStyleBtn = styled.button`
-  color: var(--mainDark);
+  color: var(--mainYellow);
   text-decoration: none;
   cursor: pointer;
   padding: 0.25em 1em;
   margin: 1em;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: bold;
   border: 1px solid var(--lightBlue);
   border-radius: 3px;
-  background-color: var(--mainYellow);
+  background-color: var(--mainDark);
 
   &:hover {
-    background-color: var(--mainDark);
-    color: var(--mainWhite);
+    background-color: var(--mainYellow);
+    color: var(--mainDark);
     border: 1px solid var(--lightBlue);
+  }
+
+  i {
+    position: relative;
+    top: 8px;
+    font-size: 2.5rem;
+    color: var(--mainWhite);
   }
 `
