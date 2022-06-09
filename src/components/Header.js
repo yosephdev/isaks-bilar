@@ -1,58 +1,108 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { HeaderWrapper } from '../styledComponents'
-
-import { AiOutlineShoppingCart } from 'react-icons/ai'
-import { GiHamburgerMenu } from 'react-icons/gi'
-import { useState } from 'react'
-// import { useProductsContext } from '../context/ProductsContext'
-import Cart from './Cart'
+import { mobile } from '../responsive'
 
 function Header() {
-  const [isCartOpen, setIsCartOpen] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  //  const { cart } = useProductsContext()
-
-  const toggleCart = () => {
-    setIsCartOpen(!isCartOpen)
-    if (!isMenuOpen) {
-      document.body.classList.toggle('no-scroll')
-    } else {
-      setIsMenuOpen(false)
-    }
-  }
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-    if (!isCartOpen) {
-      document.body.classList.toggle('no-scroll')
-    } else {
-      setIsCartOpen(false)
-    }
-  }
-
   return (
-    <HeaderWrapper>
-      <div className="container">
-        <div className="hamburger-menu" onClick={() => toggleMenu()}>
-          <GiHamburgerMenu />
-        </div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/products">Cars for Sale</Link>
-          </li>
-        </ul>
-        <button className="cart-container" onClick={toggleCart}>
-          <AiOutlineShoppingCart />
-          {/* <span className="number">{cart.length}</span> */}
-        </button>
-        {isCartOpen && <Cart toggleCart={toggleCart} />}
-      </div>
-      {/* {isMenuOpen && <MobileMenu toggleMenu={toggleMenu}/>} */}
-    </HeaderWrapper>
+    <Container>
+      <Wrapper>
+        <Left>
+          <Link to={'/'}>
+            <Logo>Auto Mart</Logo>
+          </Link>
+        </Left>
+
+        <Center>
+          <MenuItem>
+            <Link to={'/'}>Home</Link>
+          </MenuItem>
+          <MenuItemM>
+            {' '}
+            <Link to={'/products'}>Car Lists</Link>
+          </MenuItemM>
+          <MenuItem>
+            {' '}
+            <Link to={'/'}>Contact us</Link>
+          </MenuItem>
+        </Center>
+      </Wrapper>
+    </Container>
   )
 }
+
+const Container = styled.div`
+  height: 60px;
+  // background:red;
+  ${mobile({ height: '60px' })}
+`
+
+const Wrapper = styled.div`
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  ${mobile({ padding: '10px 5px' })}
+`
+
+const Left = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: center;
+`
+
+const Center = styled.div`
+  flex: 1;
+  display: flex;
+  text-align: center;
+`
+
+const Logo = styled.h1`
+  font-weight: bold;
+  color: black;
+  ${mobile({ fontSize: '18px' })}
+`
+
+const MenuItem = styled.div`
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 25px;
+  font-weight: 400;
+  ${mobile({ fontSize: '11px', marginLeft: '6px' })}
+`
+const MenuItemM = styled.div`
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 25px;
+  font-weight: 400;
+  display: initial;
+  ${mobile({ fontSize: '12px', marginLeft: '5px', display: 'none' })}
+`
+
+const Button = styled.button`
+  padding: 10px 20px;
+  border: 1px solid blue;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-right: 5px;
+  &:hover {
+    background-color: #f8f4f4;
+  }
+`
+const Button2 = styled.button`
+  padding: 10px 25px;
+  border: 1px solid white;
+  background-color: teal;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  color: white;
+  &:hover {
+    background-color: teal;
+  }
+  ${mobile({ fontSize: '12px', padding: '10px' })}
+`
 
 export default Header
