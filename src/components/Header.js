@@ -9,7 +9,7 @@ function Header() {
       <Wrapper>
         <Left>
           <Link to={'/'}>
-            <Logo>Auto Mart</Logo>
+            <Logo>Auto Mobil</Logo>
           </Link>
         </Left>
 
