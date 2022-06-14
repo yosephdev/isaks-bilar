@@ -9,7 +9,7 @@ function Header() {
       <Wrapper>
         <Left>
           <Link to={'/'}>
-            <Logo>Auto Mobil</Logo>
+            <Logo>Isaks Auto Mart</Logo>
           </Link>
         </Left>
 
@@ -19,7 +19,7 @@ function Header() {
           </MenuItem>
           <MenuItemM>
             {' '}
-            <Link to={'/products'}>Car Lists</Link>
+            <Link to={'/cars'}>Car Lists</Link>
           </MenuItemM>
           <MenuItem>
             {' '}
@@ -59,8 +59,10 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
+  font-family: 'La Belle Aurore', sans-serif;
+  font-size: 24px;
   color: black;
-  ${mobile({ fontSize: '18px' })}
+  ${mobile({ fontSize: '16px' })}
 `
 
 const MenuItem = styled.div`

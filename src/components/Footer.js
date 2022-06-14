@@ -15,10 +15,9 @@ function Footer() {
   return (
     <Container>
       <Left>
-        <Logo>Auto Mobil</Logo>
+        <Logo>Isaks Auto Mart</Logo>
         <Desc>
-          Auto Mobil is an online marketplace for automobiles, with Auto Mobil
-          users posting their cars for sale.
+         Isaks Auto Mart is an online marketplace for automobiles. Shop for top-quality cars online.
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
@@ -70,7 +69,9 @@ const Left = styled.div`
   padding: 20px;
 `
 
-const Logo = styled.h1``
+const Logo = styled.h1`
+font-family: 'La Belle Aurore', sans-serif;
+font-size: 24px;`
 
 const Desc = styled.p`
   margin: 20px 0px;
@@ -127,7 +128,4 @@ const ContactItem = styled.div`
   align-items: center;
 `
 
-const Payment = styled.img`
-  width: 50%;
-`
 export default Footer
