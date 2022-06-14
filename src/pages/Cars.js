@@ -4,6 +4,18 @@ import { Link } from 'react-router-dom'
 import CarItem from './CarItem'
 import styled from 'styled-components'
 import { mobile } from '../responsive'
+import { motion } from 'framer-motion'
+const PageWrapper = motion.div
+const PageVariant = {
+  initial: {
+    opacity: 0,
+    y: -100,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+  },
+}
 
 function Cars() {
   const [cars, setCars] = useState([])
@@ -18,21 +30,27 @@ function Cars() {
     fetchCars()
   }, [])
 
-  return (   
-    <div>
-      <CreateDiv>
-        <Link to={'/cars'}>
-          <ButtonAll>View All Cars</ButtonAll>
-        </Link>
-      </CreateDiv>
+  return (
+    <PageWrapper>
+      <motion.div
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        variants={PageVariant}
+      >
+        <CreateDiv>
+          <Link to={'/cars'}>
+            <ButtonAll>View All Cars</ButtonAll>
+          </Link>
+        </CreateDiv>
 
-     
-      <Container>
-        {cars.map((car) => (
-          <CarItem key={car.id} car={car} />
-        ))}
-      </Container>
-    </div>
+        <Container>
+          {cars.map((car) => (
+            <CarItem key={car.id} car={car} />
+          ))}
+        </Container>
+      </motion.div>
+    </PageWrapper>
   )
 }
 
