@@ -2,6 +2,31 @@ import styled from 'styled-components'
 import { mobile } from '../responsive'
 import { Link } from 'react-router-dom'
 
+function CarItem({ car }) {   
+
+  return (
+    <Container>
+      <Link style={{ textDecoration: 'none' }} to={`/car/${car.id}`}>
+        <Image src={car.url} />
+
+        <Desc>{(car.description && car.description).slice(0, 70)}.... </Desc>
+        <Info>
+          <Title>{car.title}</Title>
+        </Info>
+      </Link>
+
+      <div style={{ position: 'absolute' }}>
+        <Link style={{ textDecoration: 'none' }} to={`/car/${car.id}`}>
+          <View>View Now</View>
+        </Link>
+      </div>
+    </Container>
+  )
+}
+
+export default CarItem
+
+
 const Container = styled.div`
   flex: 2;
   margin: 5px;
@@ -63,53 +88,3 @@ const View = styled.button`
     background-color: #a6cfdc;
   }
 `
-
-const Delete = styled.button`
-  border: none;
-  padding: 10px 25px;
-  border-radius: 5px;
-  background-color: red;
-  color: white;
-  cursor: pointer;
-  font-weight: 600;
-  margin-left: 30px;
-  &:hover {
-    background-color: #ffa07a;
-  }
-`
-
-const CarItem = ({ item }) => {
-  const dispatch = useDispatch()
-
-  const deleteItem = (cart_id) => {
-    deleteCarFunc(cart_id, dispatch)
-  }
-
-  return (
-    <Container>
-      <Link style={{ textDecoration: 'none' }} to={`/car/${item._id}`}>
-        <Image src={item.image} />
-
-        <Desc>{(item.desc && item.desc).slice(0, 70)}.... </Desc>
-        <Info>
-          <Title>{item.car_name}</Title>
-        </Info>
-      </Link>
-
-      <div style={{ position: 'absolute' }}>
-        <Link style={{ textDecoration: 'none' }} to={`/car/${item._id}`}>
-          <View>View Now</View>
-        </Link>
-        <Delete
-          onClick={() => {
-            deleteItem(item._id)
-          }}
-        >
-          Delete
-        </Delete>
-      </div>
-    </Container>
-  )
-}
-
-export default CarItem
