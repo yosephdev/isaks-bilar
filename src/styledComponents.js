@@ -131,7 +131,7 @@ export const PageWrapper = styled.section`
   }
 `
 
-export const Wrapper = styled.section`
+export const MainWrapper = styled.section`
   .container {
     width: 100%;
     max-width: var(--max-width);
@@ -169,23 +169,7 @@ export const Wrapper = styled.section`
   }
 `
 
-export const Button = styled.button`
-  background: ${(props) => (props.primary ? 'mainDark' : 'mainWhite')};
-  color: ${(props) => (props.primary ? 'mainWhite' : 'mainYellow')};
-  font-size: 1.3rem;
-  /* margin: 1em;  */
-  padding: 0.25em 1em;
-  border: 2px solid #444;
-  border-radius: 3px;
-  text-decoration: none;
-  font-weight: bold;
-  cursor: pointer;
 
-  &:hover {
-    background: ${(props) => (props.primary ? 'yellow' : 'beige')};
-    color: ${(props) => (props.primary ? 'black' : 'black')};
-  }
-`
 export const FooterWrapper = styled.footer`
   width: 100%;
   background-color: var(--mainDark);
