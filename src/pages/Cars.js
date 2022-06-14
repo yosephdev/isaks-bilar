@@ -1,60 +1,38 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import CarItem from './CarItem'
 import styled from 'styled-components'
-import { PageWrapper } from '../styledComponents'
-import { motion } from 'framer-motion'
 import { mobile } from '../responsive'
 
-function Products() {
-  const [products, setProducts] = useState([])
+function Cars() {
+  const [cars, setCars] = useState([])
 
-  const fetchProducts = async () => {
+  const fetchCars = async () => {
     const data = await fetch('https://codexplained.se/cars.php')
-    const products = await data.json()
-    setProducts(products)
+    const cars = await data.json()
+    setCars(cars)
   }
 
   useEffect(() => {
-    fetchProducts()
+    fetchCars()
   }, [])
 
-  return (
-    <PageWrapper
-      as={motion.section}
-      initial={{ x: '100vw', opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{ type: 'spring', stiffness: 100 }}
-    >
+  return (   
+    <div>
       <CreateDiv>
         <Link to={'/cars'}>
           <ButtonAll>View All Cars</ButtonAll>
-        </Link>        
+        </Link>
       </CreateDiv>
 
-      <Header>Our Service</Header>
+     
       <Container>
-        {products.map((product) => (
-          <div key={product.id}>
-            <img src={product.url} alt={product.url} />
-            <h2>{product.title}</h2>
-            <p>Price: {product.price}</p>
-            <Link to={`/products/${product.id}`}>
-              <Button
-                as={motion.button}
-                whileHover={{
-                  scale: 1.2,
-                  transition: { duration: 1 },
-                }}
-                whileTap={{ scale: 0.9 }}
-              >
-                View
-              </Button>{' '}
-            </Link>
-          </div>
+        {cars.map((car) => (
+          <CarItem key={car.id} car={car} />
         ))}
       </Container>
-    </PageWrapper>
+    </div>
   )
 }
 
@@ -103,4 +81,4 @@ const ButtonAll = styled.button`
   }
 `
 
-export default Products
+export default Cars
