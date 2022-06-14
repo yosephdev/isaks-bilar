@@ -61,28 +61,10 @@ const Container = styled.div`
   justify-content: space-between;
 `
 
-const Header = styled.h1`
-  text-align: center;
-  cursor: pointer;
-`
-
 const CreateDiv = styled.div`
   text-align: right;
   padding: 0 25px;
   ${mobile({ margin: '20px 0' })}
-`
-
-const Button = styled.button`
-  padding: 12px 35px;
-  border: 1px solid white;
-  background-color: lightcoral;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 500;
-  color: white;
-  &:hover {
-    background-color: lightslategrey;
-  }
 `
 
 const ButtonAll = styled.button`

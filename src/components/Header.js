@@ -49,6 +49,8 @@ const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  ${mobile({ display: 'none' })}  
 `
 
 const Center = styled.div`
@@ -62,7 +64,8 @@ const Logo = styled.h1`
   font-family: 'La Belle Aurore', sans-serif;
   font-size: 24px;
   color: black;
-  ${mobile({ fontSize: '16px' })}
+  padding-top: 20px;      
+  ${mobile({ fontSize: '20px' })}  
 `
 
 const MenuItem = styled.div`
@@ -81,30 +84,5 @@ const MenuItemM = styled.div`
   ${mobile({ fontSize: '12px', marginLeft: '5px', display: 'none' })}
 `
 
-const Button = styled.button`
-  padding: 10px 20px;
-  border: 1px solid blue;
-  background-color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 500;
-  margin-right: 5px;
-  &:hover {
-    background-color: #f8f4f4;
-  }
-`
-const Button2 = styled.button`
-  padding: 10px 25px;
-  border: 1px solid white;
-  background-color: teal;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 500;
-  color: white;
-  &:hover {
-    background-color: teal;
-  }
-  ${mobile({ fontSize: '12px', padding: '10px' })}
-`
 
 export default Header
