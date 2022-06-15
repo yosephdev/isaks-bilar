@@ -27,7 +27,7 @@ This project requires me to build a web shop according to a flowchart and is boo
     ■ Beskrivning
     ■ Lagersaldo
 
-○ Bygg vidare på denna sida med en “Add to Cart”-knapp, som skall möjliggöra att produkten läggs till i varukorgen
+○ Bygg vidare på denna sida med en “Add to Cart”-knapp, som skall möjliggöra att produkten läggs till i varukorgen (In progress)
 
 
 ### pages/Checkout.js
