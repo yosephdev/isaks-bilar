@@ -1,0 +1,54 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.checkoutProduct {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.checkoutProduct__image {
+  width: 130px;
+}
+.checkoutProduct__info {
+  display: flex;
+  align-items: center;
+  max-width: 165px;
+  margin: 0 2rem 0 1.6rem;
+}
+.info-box {
+  margin-left: 3rem;
+  display: flex;
+  align-items: center;
+}
+.trashcan__btn {
+  background-color: white;
+  border: 0;
+  margin-left: 6rem;
+}
+
+.trashcan__icon {
+  color: rgb(170, 170, 170);
+}
+
+@media (max-width: 428px) {
+  .checkoutProduct {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .checkoutProduct__image {
+    width: 100px;
+  }
+  .checkoutProduct__info {
+    max-width: 100px;
+    margin: 0;
+  }
+  .info-box {
+    margin-left: 1.2rem;
+  }
+  .trashcan__btn {
+    margin-left: 1rem;
+  }
+}

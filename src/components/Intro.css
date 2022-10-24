@@ -1,0 +1,42 @@
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.image__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: normal;
+  margin-top: 20px;
+}
+
+.box-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.images {
+  margin: 15px;
+  width: 300px;
+}
+
+@media (max-width: 428px) {
+  .images {
+    width: 200px;
+    margin: 6px 3px 3px 3px;
+  }
+}
+@media (max-width: 391px) {
+  .images {
+    width: 180px;
+    margin: 5px 3px 3px 3px;
+  }
+}
+@media (max-width: 376px) {
+  .images {
+    width: 170px !important;
+    margin: 5px 3px 3px 3px;
+  }
+}

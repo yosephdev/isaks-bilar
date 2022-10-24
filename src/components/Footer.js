@@ -1,131 +1,70 @@
-import React from 'react'
-import styled from 'styled-components'
-import { mobile } from '../responsive'
-import {
-  AiFillFacebook,
-  AiOutlineTwitter,
-  AiOutlineInstagram,
-  AiFillMail,
-  AiOutlinePhone,
-  AiFillHome
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+import About from "./About";
+import "./Footer.css";
+import Klarna from "../logopack/Klarna.svg";
+import Trygg from "../logopack/Trygg.svg";
+import Media from "../logopack/media.png";
 
-} from 'react-icons/ai'
 
 function Footer() {
   return (
-    <Container>
-      <Left>
-        <Logo>Isaks Auto Mart</Logo>
-        <Desc>
-         Isaks Auto Mart is an online marketplace for automobiles. Shop for top-quality cars online.
-        </Desc>
-        <SocialContainer>
-          <SocialIcon color="3B5999">
-            <AiFillFacebook />
-          </SocialIcon>
-          <SocialIcon color="E4405F">
-            <AiOutlineInstagram />
-          </SocialIcon>
-          <SocialIcon color="55ACEE">
-            <AiOutlineTwitter />
-          </SocialIcon>
-        </SocialContainer>
-      </Left>
-      <Center>
-        <Title>Useful Links</Title>
-        <List>
-          <ListItem>Home</ListItem>
-          <ListItem>About us</ListItem>
-          <ListItem>Contact</ListItem>
-        </List>
-      </Center>
-      <Right>
-        <Title>Contact</Title>
-        <ContactItem>
-          <AiFillHome style={{ marginRight: '10px' }} /> Eskilstuna, Sweden      
-        </ContactItem>
-        <ContactItem>
-          <AiOutlinePhone style={{ marginRight: '10px' }} /> +46 703566108
-        </ContactItem>
-        <ContactItem>
-          <AiFillMail style={{ marginRight: '10px' }} /> yosephbet@gmail.com
-        </ContactItem>
-      </Right>
-    </Container>
-  )
+    <div className="wrapper">
+      <div className="footer__container">
+        <div className="info__box">
+          <p className="info__head"><Link to="/about">Om oss</Link></p>
+          <ul>
+            <li>Om Baby's & Me</li>
+            <li>Jobba hos oss</li>
+            <li>Nyheter</li>
+          </ul>
+        </div>
+        <div className="info__box">
+          <p className="info__head cus-service"><Link to="/customer">Kundservice</Link></p>
+          <ul>
+            <li>Kontakta oss</li>
+            <li>Frågor och svar</li>
+            <li>Våra butiker</li>
+          </ul>
+        </div>
+        <div className="info__box">
+          <p className="info__head"><Link to="/howto">Så handlar du</Link></p>
+          <ul>
+            <li>Betalning</li>
+            <li>Leverans</li>
+            <li>Ångerrätt/Returer</li>
+            <li>Köpvillkor</li>
+          </ul>
+        </div>
+        <div className="info__box">
+          <p className="info__head"><Link to="/club">Kundklubben</Link></p>
+          <ul>
+            <li>Om vår Kundklubb</li>
+            <li>Logga in/Bli medlem</li>
+            <li>Frågor/Svar Kundklubben</li>
+          </ul>
+        </div>
+        <div className="info__box shadow-box">
+          <p className="info__head kontakt-head">Kontakt</p>
+          <ul>
+            <li className="email">Kundtjanst@babysme.com</li>
+            <li>Telefon: xxx - xxx xx xx</li>
+            <li>Vardagar 10.00 - 16.00</li>
+          </ul>
+        </div>
+      </div>
+      <div className="payment__box">
+        <img className="img klarna" src={Klarna}></img>
+        <img className="img trygg" src={Trygg}></img>
+        <img className="img img-png" src={Media}></img>
+      </div>
+      <div className="copy-right">
+        <p className="cr-text">
+          Babysme.com - Leksaksaffär online! - Copyright © 2022 - All rights reserved - Design by <a href="https://www.yoseph.dev/" target="_blank">Yoseph Berhane</a>
+        </p>
+      </div>
+    </div>
+  );
 }
 
-
-const Container = styled.div`
-  margin-top: 70px;
-  display: flex;
-  ${mobile({ flexDirection: 'column' })}
-`
-
-const Left = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-`
-
-const Logo = styled.h1`
-font-family: 'La Belle Aurore', sans-serif;
-font-size: 24px;`
-
-const Desc = styled.p`
-  margin: 20px 0px;
-`
-
-const SocialContainer = styled.div`
-  display: flex;
-`
-
-const SocialIcon = styled.div`
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  color: white;
-  background-color: #${(props) => props.color};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
-`
-
-const Center = styled.div`
-  flex: 1;
-  padding: 20px;
-  ${mobile({ display: 'none' })}
-`
-
-const Title = styled.h3`
-  margin-bottom: 30px;
-`
-
-const List = styled.ul`
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-`
-
-const ListItem = styled.li`
-  width: 50%;
-  margin-bottom: 10px;
-`
-
-const Right = styled.div`
-  flex: 1;
-  padding: 20px;
-  ${mobile({ backgroundColor: '#fff8f8' })}
-`
-
-const ContactItem = styled.div`
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-`
-
-export default Footer
+export default Footer;

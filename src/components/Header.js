@@ -1,88 +1,84 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import { mobile } from '../responsive'
+import React from "react";
+import logo from "../logopack/logo.png";
+import "./Header.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBasketShopping,
+  faUser,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
+import { faMessage } from "@fortawesome/free-regular-svg-icons";
+import DropdownMenu from "./DropdownMenu";
+import { Link } from "react-router-dom";
+import { useStateValue } from "./StateProvider";
 
 function Header() {
-  return (
-    <Container>
-      <Wrapper>
-        <Left>
-          <Link to={'/'}>
-            <Logo>Isaks Auto Mart</Logo>
-          </Link>
-        </Left>
+  const [{ basket }] = useStateValue();
 
-        <Center>
-          <MenuItem>
-            <Link to={'/'}>Home</Link>
-          </MenuItem>
-          <MenuItemM>
-            {' '}
-            <Link to={'/cars'}>Car Lists</Link>
-          </MenuItemM>
-          <MenuItem>
-            {' '}
-            <Link to={'/'}>Contact us</Link>
-          </MenuItem>
-        </Center>
-      </Wrapper>
-    </Container>
-  )
+  return (
+    <div className="header">
+      <Link className="links link__header" to="/">
+        <img className="header__logo" src={logo} />
+      </Link>
+      <Link className="links link__header" to="/">
+        <div className="logo__name">
+          <h1>Baby's & Me</h1>
+        </div>
+      </Link>
+      <div className="category__bar">
+        <DropdownMenu />
+      </div>
+
+      <div className="header__search">
+        <input
+          className="header__searchInput"
+          type="text"
+          placeholder="Search product ..."
+        />
+        <FontAwesomeIcon
+          className="header__searchIcon"
+          icon={faMagnifyingGlass}
+        />
+      </div>
+
+      <div className="header__nav">
+        <Link className="links link_header" to="/customer">
+          <div className="header__option option__hoverGray">
+            <span className="header__optionLine ">
+              Kundservice{" "}
+              <span>
+                <FontAwesomeIcon className="cservice__icon" icon={faMessage} />
+              </span>
+            </span>
+          </div>
+        </Link>
+
+        <Link className="links link__header" to="/varukorg">
+          <div className="header__option items__basket">
+            <span className="header__optionLine basket__line">
+              Varukorg{" "}
+              <span>
+                <FontAwesomeIcon
+                  className="basket__icon"
+                  icon={faBasketShopping}
+                />
+                <span className="number_basketItem">{basket?.length}</span>
+              </span>
+            </span>
+          </div>
+        </Link>
+
+        <div className="header__option option__hoverGray">
+          <span className="header__optionLine ">
+            Logga in{" "}
+            <span>
+              <FontAwesomeIcon className="user__icon" icon={faUser} />
+            </span>{" "}
+          </span>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-const Container = styled.div`
-  height: 60px;
-  // background:red;
-  ${mobile({ height: '60px' })}
-`
-
-const Wrapper = styled.div`
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  ${mobile({ padding: '10px 5px' })}
-`
-
-const Left = styled.div`
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  ${mobile({ display: 'none' })}  
-`
-
-const Center = styled.div`
-  flex: 1;
-  display: flex;
-  text-align: center;
-`
-
-const Logo = styled.h1`
-  font-weight: bold;
-  font-family: 'La Belle Aurore', sans-serif;
-  font-size: 24px;
-  color: black;
-  padding-top: 20px;      
-  ${mobile({ fontSize: '20px' })}  
-`
-
-const MenuItem = styled.div`
-  font-size: 14px;
-  cursor: pointer;
-  margin-left: 25px;
-  font-weight: 400;
-  ${mobile({ fontSize: '11px', marginLeft: '6px' })}
-`
-const MenuItemM = styled.div`
-  font-size: 14px;
-  cursor: pointer;
-  margin-left: 25px;
-  font-weight: 400;
-  display: initial;
-  ${mobile({ fontSize: '12px', marginLeft: '5px', display: 'none' })}
-`
-
-
-export default Header
+export default Header;

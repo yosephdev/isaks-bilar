@@ -1,0 +1,45 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.shipping {
+  border: 0;
+  background: transparent;
+  margin: 4rem 5rem 3rem 5rem;
+}
+.wrapping {
+  display: flex;
+  justify-content: space-around;
+}
+.shipping__text {
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+}
+.wrapping {
+  padding: 1rem 0.7rem 0.7rem 0.7rem;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.truck-logo {
+  margin-bottom: 0.3em;
+}
+@media (max-width: 428px) {
+  .shipping__text {
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+    font-size: x-small;
+    width: 70px;
+  }
+
+  .shipping {
+    border: 0;
+    background: transparent;
+    margin: 0;
+  }
+  .shipping__logo {
+    width: 35px;
+  }
+}

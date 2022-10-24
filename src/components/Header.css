@@ -1,0 +1,223 @@
+.header {
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #2c2c2c;
+  position: top;
+  z-index: 100;
+  width: 100%;
+}
+.header__logo {
+  width: 70px;
+  object-fit: contain;
+  margin: 0 10px 0 40px;
+}
+.logo__name {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 14px;
+  margin: 5px;
+  padding-top: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  font-feature-settings: "cpsp" on;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(121, 121, 121, 0.705);
+}
+.header__search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+}
+.header__searchInput {
+  height: 40px;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  size: 50px;
+}
+.header__searchInput:focus {
+  border: none !important;
+}
+.header__searchIcon {
+  padding: 10px;
+  height: 20px;
+  background-color: #2c2c2c;
+  outline: 1px solid white;
+  outline-offset: -1px;
+  cursor: pointer;
+  color: white;
+}
+.header__option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: white;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: black !important;
+  cursor: pointer;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+.category__bar {
+  align-content: center;
+  cursor: pointer;
+  margin: 5px 5px 5px 5px;
+  background-color: white;
+  border-radius: 5px;
+}
+.bar-icon {
+  margin: 5px 2px 5px 12px;
+}
+.items__basket {
+  background-color: #ff6900 !important;
+  border: 1px solid rgba(255, 105, 0, 0.76);
+  text-align: center;
+}
+.items__basket:hover {
+  background-color: rgb(255, 123, 29) !important;
+  font-weight: 600;
+}
+.basket__line {
+  margin-bottom: 3px;
+}
+.option__hoverGray:first-child {
+  padding: 14px;
+}
+
+.option__hoverGray:hover {
+  background-color: white !important;
+  color: black;
+  font-weight: 600;
+}
+.basket__icon {
+  margin: 5px 5px 1px 4px;
+}
+#dropdown-button-dark {
+  padding: -1px 5px !important;
+  background-color: #2c2c2c;
+  color: white;
+  border: none;
+}
+
+.category__intro {
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+}
+.last_divider {
+  border: none;
+}
+.header__optionLine {
+  font-size: 15px;
+}
+.header__optionLine :hover {
+  color: white !important;
+}
+.links {
+  text-decoration: none;
+  color: white;
+  color: inherit;
+}
+.links :focus,
+:hover,
+:visited,
+:link,
+:active {
+  text-decoration: none;
+}
+
+.drop__link {
+  color: inherit;
+}
+.drop__link :active {
+  background-color: lightgray;
+}
+@media (max-width: 428px) {
+  .header {
+    height: 210px;
+    display: flex;
+    align-items: center;
+    background-color: #2c2c2c;
+    position: top;
+    z-index: 1;
+    width: 100%;
+  }
+  .headerlogo {
+    width: 40px;
+  }
+  .headersearch {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border-radius: 24px;
+    max-width: 100px;
+  }
+
+  .categorybar {
+    align-content: center;
+    cursor: pointer;
+    margin: 1px 1px 1px 1px;
+    background-color: white;
+    border-radius: 5px;
+  }
+  .bar-icon {
+    max-width: 20px;
+    margin-left: 20px;
+  }
+
+  .headersearch {
+    max-width: 375px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border-radius: 24px;
+  }
+
+  .header__nav {
+    max-width: 100%;
+    max-height: 80px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    justify-content: space-evenly;
+  }
+  .header__option {
+    padding: 7px;
+  }
+  @media (max-width: 405px) {
+    .header__option {
+      padding: 7px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+  .option__hoverGray:first-child {
+    padding: 11px;
+  }
+}
+@media (max-width: 390px) {
+  .header__option {
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+@media (max-width: 376px) {
+  .header__option {
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .option__hoverGray:first-child {
+    padding: 13.6px;
+  }
+}

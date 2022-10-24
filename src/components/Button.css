@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+.buy-button {
+  cursor: pointer;
+  font-size: 10px;
+  border-radius: 10px;
+  padding: 5px 20px 5px 20px;
+  color: #fff;
+  background-color: #ff6900;
+  font-weight: bold;
+  font-size: 15px;  
+}
+
+.buy-button:hover {
+  background-color: rgba(255, 105, 0, 0.76);
+}
+
+@media (max-width: 375px) {
+  .buy-button {
+    padding: 2px 5px 2px 5px;
+    border-radius: 5px;
+  }
+}

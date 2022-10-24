@@ -1,0 +1,51 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.image {
+  object-fit: contain;
+  width: 120px;
+  margin: 4rem;
+}
+.page__title {
+  text-align: center !important;
+  margin-bottom: 1.5rem;
+}
+.list__container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 10rem 10rem 0 10rem;
+}
+.title {
+  font-size: 3rem;
+}
+.page__image {
+  display: flex;
+  flex-wrap: wrap;
+  object-fit: contain;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 4rem;
+}
+@media (max-width: 428px) {
+  .list__container {
+    margin-top: 0;
+    margin: 0;
+  }
+  .title {
+    font-size: 25px;
+    margin-top: 1.5rem;
+  }
+  .page-image {
+    max-width: 375px;
+  }
+  .image {
+    object-fit: contain;
+    width: 60px;
+    margin: 15px;
+  }
+}

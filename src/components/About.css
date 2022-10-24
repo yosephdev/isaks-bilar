@@ -1,0 +1,18 @@
+* ::backdrop,
+*::after {
+  box-sizing: border-box;
+}
+
+.home{
+  width: 10%;
+  height: 10%;
+  text-align: center;
+  
+}
+
+.text{
+  text-align:center;
+}
+
+
+

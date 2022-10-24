@@ -1,21 +1,55 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
-import Home from './components/Home'
-import Cars from './pages/Cars'
-import Car from './pages/Car'
+import './App.css'
 import Footer from './components/Footer'
+import Header from './components/Header'
+import Homepage from './components/Homepage'
+import ProductsList from './components/ProductsList'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Checkout from './components/Checkout'
+import About from './components/About'
+import CustomerService from './components/CustomerService'
+import HowTo from './components/HowTo'
+import Club from './components/Club'
 
 function App() {
   return (
-    <BrowserRouter>  {/* BrowserRouter is a component that wraps the entire app */}
-      <Header />
-      <Routes>  {/* Routes is a component that renders the routes */}
-        <Route exact path="/" element={<Home/>} />         
-        <Route path="/cars" element={<Cars />} />  {/* element is a prop that is passed to the Route component */}
-        <Route path="/car/:id" element={<Car />} />
-      </Routes>
-      <Footer/>
+    <BrowserRouter>
+      <div>
+        <Header />
+      </div>
+      <div className="App">
+        <Routes>
+          <Route exact path="/" element={<Homepage />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/customer" element={<CustomerService />} />
+          <Route exact path="/howto" element={<HowTo />} />
+          <Route exact path="/club" element={<Club />} />
+          <Route path="/" element={<Homepage />} />
+
+          <Route
+            path="/klader"
+            exact
+            element={<ProductsList catName="Babykläder" catId={2} />}
+          />
+
+          <Route
+            path="/leksaker"
+            exact
+            element={<ProductsList catName="Babyleksaker" catId={1} />}
+          />
+
+          <Route
+            path="/produkter"
+            exact
+            element={<ProductsList catName="Babyprodukter" catId={3} />}
+          />
+          <Route path="/varukorg" exact element={<Checkout />} />
+        </Routes>
+      </div>
+
+      <div>
+        <Footer />
+      </div>
     </BrowserRouter>
   )
 }

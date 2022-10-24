@@ -1,0 +1,30 @@
+.carousel {
+  width: 450px;
+  position: relative;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+@media (max-width: 428px) {
+  .carousel {
+    width: 400px;
+  }
+}
+@media (max-width: 400px) {
+  .carousel {
+    width: 350px;
+  }
+}
