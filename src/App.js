@@ -33,7 +33,7 @@ function App() {
           />
 
           <Route
-            path="/nybilar"
+            path="/nyabilar"
             exact
             element={<ProductsList catName="Nyabilar" catId={1} />}
           />
