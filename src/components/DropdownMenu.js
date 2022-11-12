@@ -25,7 +25,7 @@ function DropdownMenu() {
 
         <Link className="drop__link" to="/gammalbilar">
           <Dropdown.Item className="drop__downItem" href="#/action-2">
-                        Gammalbilar                       
+                        Gammal bilar                    
           </Dropdown.Item>
         </Link>
 
