@@ -22,7 +22,7 @@ function Header() {
       </Link>
       <Link className="links link__header" to="/">
         <div className="logo__name">
-          <h1>Baby's & Me</h1>
+          <h1>Isaks Bilar</h1>
         </div>
       </Link>
       <div className="category__bar">

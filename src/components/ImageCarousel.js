@@ -1,9 +1,9 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import "./ImageCarousel.css";
-import image1 from "../logopack/10.jpg";
-import image2 from '../logopack/mockup.jpg'
-import image3 from '../logopack/16.jpg'
+import image1 from "../logopack/17.jpg";
+import image2 from '../logopack/12.jpg'
+import image3 from '../logopack/18.jpg'
 
 const ImageCarousel = () => {
   return (
@@ -28,9 +28,10 @@ const ImageCarousel = () => {
           <img className="d-block w-100" src={image3} alt="Third slide" />
 
           <Carousel.Caption>
-            <h3>Perfect fit</h3>
+            <h3>Premium service</h3>
             <p>
-              Våra produkter är anpassade för din bebis, så att du kan känna dig
+              Vi har en av Sveriges bästa kundservice, vi svarar på alla frågor
+              inom 24 timmar.
             </p>
           </Carousel.Caption>
         </Carousel.Item>

@@ -8,10 +8,12 @@ const About = () => {
       <div className="home">
         <div className="home__container">
           <Textbox
-            heading="Om Baby's & Me"
-            text="Vi på Baby's & Me anser att vår barndom är en så värdefull tid i våra liv att det helt enkelt inte finns tid att leka med leksaker som saknar funktion eller estetik. Vi erbjuder handgjorda och naturliga leksaker som passar oavsett vilken ålder ditt barn har. 
-"
+            heading="Om Isaks Bilar"
+            text="Vi är ett företag som säljer bilar. Vi har ett stort utbud av bilar. Vi har bilar för alla smaker. Vi har bilar för barn, bilar för gamla och bilar för alla andra. Vi har även bilar för barn som är gamla. Vi har även bilar för barn som är gamla." 
+
           />
+      
+            
 
           <Textbox
             heading="Jobba hos oss"

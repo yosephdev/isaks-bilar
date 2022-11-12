@@ -14,7 +14,7 @@ function Footer() {
         <div className="info__box">
           <p className="info__head"><Link to="/about">Om oss</Link></p>
           <ul>
-            <li>Om Baby's & Me</li>
+            <li>Om Isaks Bilar</li>
             <li>Jobba hos oss</li>
             <li>Nyheter</li>
           </ul>
@@ -47,7 +47,7 @@ function Footer() {
         <div className="info__box shadow-box">
           <p className="info__head kontakt-head">Kontakt</p>
           <ul>
-            <li className="email">Kundtjanst@babysme.com</li>
+            <li className="email">Kundtjanst@isaksbilar.se</li>
             <li>Telefon: xxx - xxx xx xx</li>
             <li>Vardagar 10.00 - 16.00</li>
           </ul>
@@ -60,7 +60,7 @@ function Footer() {
       </div>
       <div className="copy-right">
         <p className="cr-text">
-          Babysme.com - Leksaksaffär online! - Copyright © 2022 - All rights reserved - Design by <a href="https://www.yoseph.dev/" target="_blank">Yoseph Berhane</a>
+          Isaksbilar.se - Leksaksaffär online! - Copyright © 2022 - All rights reserved - Design by <a href="https://www.yoseph.dev/" target="_blank">Yoseph Berhane</a>
         </p>
       </div>
     </div>

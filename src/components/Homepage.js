@@ -13,22 +13,21 @@ const Homepage = () => {
       <div className="home__container">
         <div className="home__title">
           <h1 className="category-name">
-           Babykläder
+            Nya bilar <span className="category-name__underline"></span>                      
           </h1>
           <Products catId={1}></Products>
         </div>
 
         <div className="home__title">
           <h1 className="category-name">
-          Babyleksaker
-
+            Gammla bilar
           </h1>
           <Products catId={2}></Products>
         </div>
 
         <div className="home__title">
           <h1 className="category-name">
-            Babyprodukter
+            Bilar för barn           
           </h1>
           <Products catId={3}></Products>
         </div>

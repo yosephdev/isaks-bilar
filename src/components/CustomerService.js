@@ -10,7 +10,7 @@ const CustomerService = () => {
       <div className="home__container">
             <Textbox heading="Kontakta Oss" 
             text="
-            Kundtjanst@babysme.com
+            Kundtjanst@isaksbilar.se
             Telefon: xxx - xxx xx xx
             Öppetider: Vardagar 10.00 - 16.00" />
 

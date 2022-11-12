@@ -27,21 +27,21 @@ function App() {
           <Route path="/" element={<Homepage />} />
 
           <Route
-            path="/klader"
+            path="/gammalbilar"
             exact
-            element={<ProductsList catName="Babykläder" catId={2} />}
+            element={<ProductsList catName="Gammalbilar" catId={2} />}
           />
 
           <Route
-            path="/leksaker"
+            path="/nybilar"
             exact
-            element={<ProductsList catName="Babyleksaker" catId={1} />}
+            element={<ProductsList catName="Nyabilar" catId={1} />}
           />
 
           <Route
-            path="/produkter"
+            path="/smabilar"
             exact
-            element={<ProductsList catName="Babyprodukter" catId={3} />}
+            element={<ProductsList catName="Bilar till barn" catId={3} />}
           />
           <Route path="/varukorg" exact element={<Checkout />} />
         </Routes>

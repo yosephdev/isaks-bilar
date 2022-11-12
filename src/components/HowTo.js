@@ -27,7 +27,7 @@ const HowTo = () => {
                         du erhåller när du registrerar ditt ångrade köp." />
 
             <Textbox heading="Köpvillkor" 
-                        text="Baby's & Me säljer varor via internet till privatpersoner och företag i Sverige 
+                        text="Isaks Bilar säljer varor via internet till privatpersoner och företag i Sverige 
                         med person- eller organisationsnummer. För att handla hos oss måste du ha fyllt 18 år 
                         samt ha en giltig svensk ID-handling för paketförsändelser. Om du är under 18 år behöver 
                         du ha fått samtycke till ditt inköp från din vårdnadshavare. För kortköp där kunden är 

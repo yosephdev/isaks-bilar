@@ -8,7 +8,21 @@ h3 {
   font-weight: 400;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #333;  
+}
+
+.carousel h3  {
+  color: aliceblue;
+  
+}
+
+.carousel p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  color: aliceblue;
+ 
 }
 
 p {
