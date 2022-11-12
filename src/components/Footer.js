@@ -60,7 +60,7 @@ function Footer() {
       </div>
       <div className="copy-right">
         <p className="cr-text">
-          Isaksbilar.se - Leksaksaffär online! - Copyright © 2022 - All rights reserved - Design by <a href="https://www.yoseph.dev/" target="_blank">Yoseph Berhane</a>
+          Isaksbilar.se - Barnbilaffär online! - Copyright © 2022 - All rights reserved - Design by <a href="https://www.yoseph.dev/" target="_blank">Yoseph Berhane</a>
         </p>
       </div>
     </div>
