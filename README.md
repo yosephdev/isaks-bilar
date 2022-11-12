@@ -12,7 +12,7 @@ This project requires me to build a web shop according to a flowchart and is boo
     ■ Titel
     ■ Pris
     ■ En länk till Produkt-sida, för den specifika produkten
-    ■ Se till att JSX-koden enskilda produkter i listan, är omskriven till en under komponent “components/Product.js”. 
+    ■ Se till att JSX-koden enskilda produkter i listan”. 
     
 ○ Bygg vidare på alla produkter i listan, med en “Add to Cart”-knapp, som skall möjliggöra att produkter läggs till i varukorgen
 
