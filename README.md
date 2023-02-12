@@ -1,61 +1,57 @@
-# Dynamisk React App
 
-This project requires me to build a web shop according to a flowchart and is bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Dynamisk React-app för en webbutik
 
-## Bygg appen, dess sidor och under komponenter efter flödesschemat
-
-### pages/Products.js
-
-○ Visa en lista på alla produkter, hämtat via ett API. Varje produkt skall visa följande
-
-    ■ Bild på produkten
-    ■ Titel
-    ■ Pris
-    ■ En länk till Produkt-sida, för den specifika produkten
-    ■ Se till att JSX-koden enskilda produkter i listan”. 
-    
-○ Bygg vidare på alla produkter i listan, med en “Add to Cart”-knapp, som skall möjliggöra att produkter läggs till i varukorgen
+## Detta projekt kräver att jag bygger en webbutik med Create React App.
 
 
-### pages/Product.js
 
-○ Visar specifik data av den valda produkten, hämtat via ett API. Följande skall visas för den enskilda produkt-sidan:
+### Visa en lista över alla produkter, hämtade via ett API. Varje produkt ska visa följande:
 
-    ■ Bild på produkten
-    ■ Titel
-    ■ Pris
-    ■ Beskrivning
-    ■ Lagersaldo
+*   Bild på produkten
+*   Titel
+*   Pris 
+*   En länk till produktsidan för den specifika produkten 
+*   Se till att JSX-koden skiljer produkterna åt i listan.
 
-○ Bygg vidare på denna sida med en “Add to Cart”-knapp, som skall möjliggöra att produkten läggs till i varukorgen (In progress)
+### Bygg vidare på alla produkter i listan med en "Lägg till i varukorg"-knapp, för att möjliggöra att produkterna läggs till i varukorgen.
 
+## pages/Product.js
 
-### pages/Checkout.js
+### Visar specifik data för den valda produkten, hämtad via ett API. Följande ska visas för den enskilda produktsidan:
 
-○ Listar alla produkter som är placerade i varukorgen, i en HTML <table>
+*   Bild på produkten 
+*   Titel 
+*   Pris 
+*   Beskrivning 
+*   Lagersaldo
 
-○ Varje produkt i tabellen skall visa:
+### Bygg vidare på denna sida med en "Lägg till i varukorg"-knapp, för att möjliggöra att produkten läggs till i varukorgen (pågående).
+
+## pages/Checkout.js
+
+- Listar alla produkter som är placerade i varukorgen i en HTML-tabell.
+
+### Varje produkt i tabellen ska visa:
+
+*  Bild på produkten
+*   Titel
+*   Pris
+
+### Totalkostnaden för alla produkter i varukorgen ska beräknas och visas.
+
+### Om ingen produkt finns i varukorgen ska en beskrivning om att varukorgen är tom visas tillsammans med en knapp som tar användaren till produktlistan.
+components/Cart.js
+
+### Cart.js är inte en enskild sida, utan en del av en sida. Detta innebär att den ska vara tillgänglig hela tiden, precis som footer och header.
+
+### Listar alla produkter som är placerade i varukorgen.
+
+### Varje produkt ska visa:
+
+*   Bild på produkten
+*   Titel
+*   Pris
   
-    ■ Bild på produkten
-    ■ Titel
-    ■ Pris
+### Totalkostnaden för alla produkter i varukorgen ska beräknas och visas.
 
-○ Total priset för alla produkter i varukorgen, skall kalkyleras och visas.
-  
-○ Om inga produkter finns i varukorgen, då skall det visas en beskrivning på att varukorgen är tom, tillsammans med en knapp som tar användaren till produktlista-sidan
-
-### components/Cart.js
-
-○ Cart.js är inte en enskild sida, utan en del av en sida. Betyder att den skall vara tillgänglig hela tiden, precis som footer och header
-  
-○ Listar alla produkter som är placerade i varukorgen
-  
-○ Varje produkt skall visa:
-  
-    ■ Bild på produkten
-    ■ Titel
-    ■ Pris
-  
-○ Totalpriset för alla produkter i varukorgen, skall kalkyleras och visas.
-  
-○ En knapp som tar användaren till kassa-sidan
+### En knapp som tar användaren till kassan.
