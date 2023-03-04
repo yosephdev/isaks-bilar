@@ -1,9 +1,7 @@
 
 # Dynamisk React-app för en webbutik
 
-## Detta projekt kräver att jag bygger en webbutik med Create React App.
-
-
+### Detta projekt kräver att jag bygger en webbutik med Create React App.
 
 ### Visa en lista över alla produkter, hämtade via ett API. Varje produkt ska visa följande:
 
@@ -15,7 +13,7 @@
 
 ### Bygg vidare på alla produkter i listan med en "Lägg till i varukorg"-knapp, för att möjliggöra att produkterna läggs till i varukorgen.
 
-## pages/Product.js
+### pages/Product.js
 
 ### Visar specifik data för den valda produkten, hämtad via ett API. Följande ska visas för den enskilda produktsidan:
 
@@ -27,7 +25,7 @@
 
 ### Bygg vidare på denna sida med en "Lägg till i varukorg"-knapp, för att möjliggöra att produkten läggs till i varukorgen (pågående).
 
-## pages/Checkout.js
+### pages/Checkout.js
 
 - Listar alla produkter som är placerade i varukorgen i en HTML-tabell.
 
