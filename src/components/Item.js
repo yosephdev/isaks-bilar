@@ -3,11 +3,11 @@ import { useStateValue } from './StateProvider'
 import './Button.css'
 import './Item.css'
 
-const Item = ({ image, prodName, price, addToCart }) => {
+const Item = ({ image, prodName, price, modelId, addToCart }) => {
   const [{ basket }, dispatch] = useStateValue()
 
   const handleClick = () => {
-    addToCart()
+    addToCart(modelId)
     dispatch({
       type: 'ADD_TO_BASKET',
       item: {
