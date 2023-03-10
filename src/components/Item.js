@@ -1,32 +1,33 @@
-import React from "react";
-import "./Button.css";
-import "./Item.css";
-import { useStateValue } from "./StateProvider";
+import React from 'react'
+import { useStateValue } from './StateProvider'
+import './Button.css'
+import './Item.css'
 
-const Item = ({ image, prodName, price }) => {
-  const [{ basket }, dispatch] = useStateValue();
+const Item = ({ image, prodName, price, addToCart }) => {
+  const [{ basket }, dispatch] = useStateValue()
 
-  const addToBasket = () => {
+  const handleClick = () => {
+    addToCart()
     dispatch({
-      type: "ADD_TO_BASKET",
+      type: 'ADD_TO_BASKET',
       item: {
         image: image,
         prodName: prodName,
         price: price,
       },
-    });
-  };
+    })
+  }
 
   return (
     <div className="item">
-      <img className="prod prod-image" src={image}></img>
+      <img className="prod prod-image" src={image} alt={prodName} />
       <p className="prod prod-name">{prodName}</p>
       <p className="prod prod-price">{price} kr</p>
-      <button className="buy-button" onClick={addToBasket}>
+      <button className="buy-button" onClick={handleClick}>
         Köp
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default Item;
+export default Item
