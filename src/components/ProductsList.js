@@ -1,11 +1,11 @@
-import React from "react";
-import { useState } from "react";
-import { designImage } from "./data";
-import Products from "./Products";
-import "./Productslist.css";
+import React, { useState } from 'react'
+import { designImage } from './data'
+import Products from './Products'
+import './Productslist.css'
 
 const ProductsList = (props) => {
-  const [image] = useState(designImage);
+  const [image] = useState(designImage)
+  const categoryIds = [props.catId, props.catId + 1] // define an array of category IDs
   return (
     <div className="list__container">
       <div className="page__title">
@@ -20,11 +20,13 @@ const ProductsList = (props) => {
         })}
       </div>
       <div className="products">
-        <Products catId={props.catId} />
-        <Products catId={props.catId} />
+        {/* render Products component with different catId props */}
+        {categoryIds.map((categoryId) => (
+          <Products key={categoryId} catId={categoryId} />
+        ))}
       </div>
     </div>
   )
-};
+}
 
-export default ProductsList;
+export default ProductsList
