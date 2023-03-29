@@ -11,7 +11,7 @@ const CustomerService = () => {
             <Textbox heading="Kontakta Oss" 
             text="
             Kundtjanst@isaksbilar.se
-            Telefon: xxx - xxx xx xx
+            Telefon: 070 - 356 61 08
             Öppetider: Vardagar 10.00 - 16.00" />
 
             <Textbox heading="Frågor och svar" 
