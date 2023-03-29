@@ -12,7 +12,9 @@ function Footer() {
     <div className="wrapper">
       <div className="footer__container">
         <div className="info__box">
-          <p className="info__head"><Link to="/about">Om oss</Link></p>
+          <p className="info__head">
+            <Link to="/about">Om oss</Link>
+          </p>
           <ul>
             <li>Om Isaks Bilar</li>
             <li>Jobba hos oss</li>
@@ -20,7 +22,9 @@ function Footer() {
           </ul>
         </div>
         <div className="info__box">
-          <p className="info__head cus-service"><Link to="/customer">Kundservice</Link></p>
+          <p className="info__head cus-service">
+            <Link to="/customer">Kundservice</Link>
+          </p>
           <ul>
             <li>Kontakta oss</li>
             <li>Frågor och svar</li>
@@ -28,7 +32,9 @@ function Footer() {
           </ul>
         </div>
         <div className="info__box">
-          <p className="info__head"><Link to="/howto">Så handlar du</Link></p>
+          <p className="info__head">
+            <Link to="/howto">Så handlar du</Link>
+          </p>
           <ul>
             <li>Betalning</li>
             <li>Leverans</li>
@@ -37,7 +43,9 @@ function Footer() {
           </ul>
         </div>
         <div className="info__box">
-          <p className="info__head"><Link to="/club">Kundklubben</Link></p>
+          <p className="info__head">
+            <Link to="/club">Kundklubben</Link>
+          </p>
           <ul>
             <li>Om vår Kundklubb</li>
             <li>Logga in/Bli medlem</li>
@@ -48,7 +56,7 @@ function Footer() {
           <p className="info__head kontakt-head">Kontakt</p>
           <ul>
             <li className="email">Kundtjanst@isaksbilar.se</li>
-            <li>Telefon: xxx - xxx xx xx</li>
+            <li>Telefon: 070 - 356 61 08</li>
             <li>Vardagar 10.00 - 16.00</li>
           </ul>
         </div>
@@ -60,11 +68,15 @@ function Footer() {
       </div>
       <div className="copy-right">
         <p className="cr-text">
-          Isaksbilar.se - Barnbilaffär online! - Copyright © 2022 - All rights reserved - Design by <a href="https://www.yoseph.dev/" target="_blank">Yoseph Berhane</a>
+          Isaksbilar.se - Barnbilaffär online! - Copyright © 2023 - All rights
+          reserved - Developed by{' '}
+          <a href="https://www.yoseph.dev/" target="_blank">
+            Yoseph Berhane
+          </a>
         </p>
       </div>
     </div>
-  );
+  )
 }
 
 export default Footer;
