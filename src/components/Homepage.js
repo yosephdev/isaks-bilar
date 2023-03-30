@@ -17,15 +17,13 @@ const Homepage = () => {
           </h1>
           <ProductsList catId={1} catName="Nya bilar" />
         </div>
-
         <div className="home__title">
-          <h1 className="category-name">Gammla bilar</h1>
-          <ProductsList catId={2} catName="Gammla bilar" />
+          <h1 className="category-name">Vintage bilar</h1>
+          <ProductsList catId={2} catName="Vintage bilar" />
         </div>
-
         <div className="home__title">
-          <h1 className="category-name">Barn Bilar</h1>
-          <ProductsList catId={3} catName="Barn Bilar" />
+          <h1 className="category-name">Leksaksbilar</h1>
+          <ProductsList catId={3} catName="Leksaksbilar" />
         </div>
       </div>
     </div>
