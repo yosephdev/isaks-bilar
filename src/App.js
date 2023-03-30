@@ -4,7 +4,6 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import Homepage from './components/Homepage'
 import ProductsList from './components/ProductsList'
-import Products from './components/Products'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Checkout from './components/Checkout'
 import About from './components/About'
@@ -24,22 +23,22 @@ function App() {
             <Route exact path="/customer" element={<CustomerService />} />
             <Route exact path="/howto" element={<HowTo />} />
             <Route exact path="/club" element={<Club />} />
+            <Route path="/" element={<Homepage />} />
 
             <Route
-              path="/gammalbilar"
-              element={<ProductsList catName="Gammalbilar" catId={2} />}
+              path="/vintage-bilar"
+              element={<ProductsList catName="Vintage bilar" catId={2} />}
             />
             <Route
-              path="/nyabilar"
-              element={<ProductsList catName="Nyabilar" catId={1} />}
+              path="/nya-bilar"
+              element={<ProductsList catName="Nya bilar" catId={1} />}
             />
             <Route
-              path="/smabilar"
-              element={<ProductsList catName="Bilar till barn" catId={3} />}
+              path="/leksaksbilar"
+              element={<ProductsList catName="Leksaksbilar" catId={3} />}
             />
-            <Route path="/products/:make/:model" element={<Products />} />
+
             <Route path="/varukorg" element={<Checkout />} />
-            <Route path="/" element={<Homepage />} />
           </Routes>
         </div>
         <Footer />

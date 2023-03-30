@@ -16,24 +16,24 @@ function DropdownMenu() {
       <Dropdown.Menu className="drop__downMenu" variant="black">
         <h1 className="category__intro">Kategorier</h1>
         <Dropdown.Divider />
-        <Link className="drop__link" to="/smabilar">
+        <Link className="drop__link" to="/nya-bilar">
           <Dropdown.Item className="drop__downItem" href="#/action-1">
-                       Bilar för barn
+            Nya bilar
           </Dropdown.Item>
         </Link>
         <Dropdown.Divider />
 
-        <Link className="drop__link" to="/gammalbilar">
+        <Link className="drop__link" to="/vintage-bilar">
           <Dropdown.Item className="drop__downItem" href="#/action-2">
-                        Gammal bilar                    
+            Vintage bilar
           </Dropdown.Item>
         </Link>
 
         <Dropdown.Divider className="last_divider" />
 
-        <Link className="drop__link" to="/nyabilar">
+        <Link className="drop__link" to="/leksaksbilar">
           <Dropdown.Item className="drop__downItem" href="#/action-3">
-                        Nya bilar                   
+            Leksaksbilar
           </Dropdown.Item>
         </Link>
       </Dropdown.Menu>
