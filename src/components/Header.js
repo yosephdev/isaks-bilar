@@ -33,7 +33,7 @@ function Header() {
         <input
           className="header__searchInput"
           type="text"
-          placeholder="Search product ..."
+          placeholder="Sök produkt ..."
         />
         <FontAwesomeIcon
           className="header__searchIcon"
@@ -45,7 +45,7 @@ function Header() {
         <Link className="links link_header" to="/customer">
           <div className="header__option option__hoverGray">
             <span className="header__optionLine ">
-              Kundservice{" "}
+              Kundservice{' '}
               <span>
                 <FontAwesomeIcon className="cservice__icon" icon={faMessage} />
               </span>
@@ -56,7 +56,7 @@ function Header() {
         <Link className="links link__header" to="/varukorg">
           <div className="header__option items__basket">
             <span className="header__optionLine basket__line">
-              Varukorg{" "}
+              Varukorg{' '}
               <span>
                 <FontAwesomeIcon
                   className="basket__icon"
@@ -70,15 +70,15 @@ function Header() {
 
         <div className="header__option option__hoverGray">
           <span className="header__optionLine ">
-            Logga in{" "}
+            Logga in{' '}
             <span>
               <FontAwesomeIcon className="user__icon" icon={faUser} />
-            </span>{" "}
+            </span>{' '}
           </span>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default Header;
